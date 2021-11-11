@@ -98,7 +98,7 @@ public class ChatClient extends UnicastRemoteObject implements InterfaceClient{
     @Override
     public void sendMessage(List<String> list) {
         try {
-            server.broadcastMessage(name + " : " + input.getText(),list);
+            server.broadcastMessage(name + ": " + input.getText(),list);
         } catch (RemoteException ex) {
             System.out.println("Error: " + ex.getMessage());
         }
